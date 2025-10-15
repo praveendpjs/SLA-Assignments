@@ -27,6 +27,7 @@ body {
 .navbar > h1{
     margin: 10px;
     text-shadow: 2px 2px 5px #333;
+    text-transform: uppercase;
 }
 ul{
     list-style-type: none;
@@ -83,4 +84,20 @@ a{
     position: relative;
     top:100px;
     text-align: center;
+}
+.section{
+    position: relative;
+    top: 150px;
+}
+.about-heading{
+    text-align: center;
+    font-size: 40px;
+}
+.sticky-header{
+    background-color: purple;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: 20px;
+    margin-top: 160px;
 }
