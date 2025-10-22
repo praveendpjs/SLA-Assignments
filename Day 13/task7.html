@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .product {
+            background: #f0f2f7;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        @media (min-width: 480px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 720px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product Page</h1>
+    <div class="product-grid">
+        <div class="product product1">product1</div>
+        <div class="product product2">product2</div>
+        <div class="product product3">product3</div>
+        <div class="product product4">product4</div>
+        <div class="product product5">product5</div>
+        <div class="product product6">product6</div>
+        <div class="product product7">product7</div>
+        <div class="product product8">product8</div>
+    </div>
+</body>
+
+</html>
