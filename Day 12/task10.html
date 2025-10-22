@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page Layout</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f5f6fa;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        aside {
+            width: 260px;
+            background: #1e1e2f;
+            color: white;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        aside .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: url('https://via.placeholder.com/120') center/cover;
+            margin: 0 auto;
+            border: 3px solid #3b3b57;
+        }
+
+        aside nav a {
+            color: #bdbddd;
+            text-decoration: none;
+            display: block;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        aside nav a:hover {
+            background: #3b3b57;
+            color: #fff;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 1rem;
+            color: #1e1e2f;
+        }
+
+        .about p {
+            line-height: 1.5;
+        }
+
+        .skills ul {
+            list-style: none;
+        }
+
+        .skills li {
+            background: #e4e6f1;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0.3rem;
+            font-size: 0.9rem;
+        }
+
+        .projects .project {
+            background: #f0f2f7;
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .projects .project h3 {
+            margin-bottom: 0.3rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <aside>
+            <div class="profile-pic"></div>
+            <nav>
+                <a href="#">Overview</a>
+                <a href="#">Projects</a>
+                <a href="#">Skills</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+
+        <main>
+            <section class="card about">
+                <h2>About Me</h2>
+                <p>
+                    I'm a front-end developer passionate about crafting responsive, user-friendly interfaces.
+                    I love working with Angular, TypeScript, and modern CSS layouts.
+                </p>
+            </section>
+
+            <section class="card skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Flexbox</li>
+                    <li>Grid</li>
+                    <li>JavaScript</li>
+                    <li>Angular</li>
+                </ul>
+            </section>
+
+            <section class="card projects">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>A clean, responsive portfolio built using CSS Grid and Flexbox.</p>
+                </div>
+                <div class="project">
+                    <h3>Task Manager</h3>
+                    <p>Angular-based productivity app with Firebase backend.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
