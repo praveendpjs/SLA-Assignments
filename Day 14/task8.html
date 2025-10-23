@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure CSS Progress Bar</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #0f172a;
+            font-family: sans-serif;
+        }
+
+        .progress-container {
+            width: 400px;
+            height: 20px;
+            background: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #06b6d4, #0ea5a4);
+            border-radius: inherit;
+            animation: fill 3s ease-in-out forwards;
+        }
+
+        @keyframes fill {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+</body>
+
+</html>
