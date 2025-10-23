@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            padding: 5vw;
+        }
+
+        .hero h1 {
+            font-size: 6vw;
+            margin-bottom: 2vh;
+        }
+
+        .hero p {
+            font-size: 2vw;
+            max-width: 60vw;
+            margin-bottom: 4vh;
+        }
+
+        .hero button {
+            padding: 1.5vh 3vw;
+            font-size: 1.5vw;
+            border: none;
+            background-color: #ff6b00;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s ease-in-out, transform 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #ff8533;
+            transform: scale(1.2);
+        }
+
+        .hero button:focus {
+            outline: 2px solid blue;
+            background-color: lightblue;
+        }
+
+        button:focus-visible {
+            outline: 2px solid green;
+            box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Welcome to the Future</h1>
+        <p>Experience the next generation of design and innovation—responsive, adaptive, and visually stunning.</p>
+        <button>Get Started</button>
+    </section>
+</body>
+
+</html>
