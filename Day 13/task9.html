@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            font-size: 25px;
+        }
+        .desktop{
+            font-size: 2rem;
+        }
+        .mobile{
+            font-size: 2em;
+            display: none;
+        }
+        @media (max-width:720px) {
+            .mobile{
+                display: block;
+            }
+            .desktop{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Responsive font-size</h1>
+    <p class="desktop">You are currently watching in desktop mode. Size is 2rem = 32px</p>
+    <p class="mobile">You are currently watching in mobile mode. Size is 2em = 50px</p>
+    </div>
+</body>
+</html>
