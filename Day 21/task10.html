@@ -1,0 +1,30 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product List</title>
+    </head>
+    <body>
+        <h1>Our Products</h1>
+        <ul id="productList"></ul>
+
+        <script>
+                const products = [
+        { name: "Laptop", price: 1200 },
+        { name: "Mouse", price: 25 },
+        { name: "Keyboard", price: 75 },
+        { name: "Monitor", price: 300 },
+        { name: "Webcam", price: 50 }
+    ];
+
+    const productListElement = document.getElementById("productList");
+
+    products.forEach(product => {
+        const listItem = document.createElement("li");
+        listItem.innerText = product.name;
+        productListElement.appendChild(listItem);
+    });
+        </script>
+    </body>
+    </html>
