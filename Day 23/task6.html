@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ToggleDarkMode()">Dark Mode</button>
+    <script>
+        let darkMode = false;
+        function ToggleDarkMode(){
+            darkMode = !darkMode
+            let btn = document.querySelector('button');
+            if(darkMode){
+                document.body.style.backgroundColor = "#121212";
+                
+                btn.innerHTML = "Light Mode";
+            } else{
+                document.body.style.backgroundColor = "white";
+                btn.innerHTML = "Dark Mode";
+            }
+        }
+
+    </script>
+</body>
+</html>

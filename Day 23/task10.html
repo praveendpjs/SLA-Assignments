@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dynamic innerHTML Demo</h1>
+
+    <label for="textInput">Type something:</label>
+    <input id="textInput" type="text" placeholder="e.g. Hello world">
+    <button id="boldBtn">Bold</button>
+    <button id="italicBtn">Italic</button>
+    <button id="bothBtn">Bold + Italic</button>
+
+    <div id="output"></div>
+
+    <script>
+        const input = document.getElementById('textInput');
+        const output = document.getElementById('output');
+        const boldBtn = document.getElementById('boldBtn');
+        const italicBtn = document.getElementById('italicBtn');
+        const bothBtn = document.getElementById('bothBtn');
+
+        boldBtn.addEventListener('click', () => {
+            const value = input.value
+            if (value) output.innerHTML = `<b>${value}</b>`;
+        });
+
+        italicBtn.addEventListener('click', () => {
+            const value = input.value
+            if (value) output.innerHTML = `<i>${value}</i>`;
+        });
+
+        bothBtn.addEventListener('click', () => {
+            const value = input.value
+            if (value) output.innerHTML = `<b><i>${value}</i></b>`;
+        });
+    </script>
+</body>
+
+</html>

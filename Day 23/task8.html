@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Todo List app</h1>
+    <label for="todo">Type your todos here</label>
+    <input id="todo" type="text">
+    <button id="add" onclick="addTodo()">Add</button>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        let input = document.getElementById("todo");
+        let list = document.getElementById("list");
+        let todos = [];
+        let inputValue = input.value;
+        function addTodo() {
+            const inputValue = input.value.trim();
+            if (!inputValue) return;
+            todos.push(inputValue);
+
+            const li = document.createElement("li");
+            li.textContent = inputValue;
+            list.appendChild(li);
+
+            input.value = "";
+        }
+    </script>
+</body>
+
+</html>
