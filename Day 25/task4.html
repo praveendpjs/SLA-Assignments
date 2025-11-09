@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <label for="email">Email:</label>
+        <input type="text" id="email">
+        <button type="submit">Submit</button>
+        <p id="para"></p>
+    </form>
+    <script>
+        let form = document.getElementById("myForm");
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let p = document.getElementById("para");
+        form.addEventListener("submit",function(event){
+            event.preventDefault();
+            try{
+                if(name.value === ""){
+                    throw new Error("Name can't be empty");
+                } else if(!email.value.includes('@')){
+                    throw new Error("Invalid email")
+                }
+                p.innerHTML = "Form is registered"
+            } catch(error){
+                p.innerHTML = error.message
+                
+            }
+        })
+    </script>
+</body>
+</html>
