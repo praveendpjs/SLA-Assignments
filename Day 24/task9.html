@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="colorBtn">Change Color</button>
+    <p id="target">Watch my color change!</p>
+
+    <script>
+        const button = document.getElementById("colorBtn");
+
+        button.addEventListener("click", function () {
+            try {
+                const element = document.getElementById("target");
+                if (!element) {
+                    throw new Error("Element not found!");
+                }
+
+                // Random color generator
+                const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+                element.style.color = randomColor;
+
+            } catch (error) {
+                console.error("Error:", error.message);
+                alert(error.message);
+            }
+        });
+    </script>
+</body>
+
+</html>
