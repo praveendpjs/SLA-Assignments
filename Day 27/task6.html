@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button onclick="loadFollowers()">Click me</button>
     <div id="followers"></div>
     <script>
-        function loadFollowers(){
+        function loadFollowers() {
             let followers = document.getElementById("followers");
             fetch("https://api.github.com/users/Arun-Trainer-Softlogic/followers")
-            .then((res)=>{
-                if(!res.ok){
-                    throw new Error("Data cannot be fetched")
-                }
-            })
-            .then((data)=>{
-                followers.innerHTML = `These are the followers ${data}`
-            })
-            .catch((error)=>{
-                followers.innerHTML = error.message
-            })
+                .then((res) => {
+                    if (!res.ok) {
+                        throw new Error("Data cannot be fetched")
+                    }
+                    return res.json()
+                })
+                .then((data) => {
+                    followers.innerHTML = data.map((follower) => `<p>${follower.login}</p>`).join("");
+
+                })
+                .catch((error) => {
+                    followers.innerHTML = error.message
+                })
         }
     </script>
 </body>
+
 </html>
