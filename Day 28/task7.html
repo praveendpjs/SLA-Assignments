@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Your Location:</h3>
+    <p id="output">Fetching location...</p>
+
+    <button id="saveBtn" disabled>Save Location</button>
+
+    <script>
+        let currentLat = null;
+        let currentLng = null;
+
+        // Get current location
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                function (pos) {
+                    currentLat = pos.coords.latitude;
+                    currentLng = pos.coords.longitude;
+
+                    document.getElementById("output").innerText =
+                        "Latitude: " + currentLat + "\nLongitude: " + currentLng;
+
+                    // Enable save button once location is available
+                    document.getElementById("saveBtn").disabled = false;
+                },
+                function (error) {
+                    document.getElementById("output").innerText = "Error: " + error.message;
+                }
+            );
+        }
+
+        // Save to localStorage
+        document.getElementById("saveBtn").addEventListener("click", function () {
+            const locationData = {
+                latitude: currentLat,
+                longitude: currentLng
+            };
+
+            localStorage.setItem("savedLocation", JSON.stringify(locationData));
+
+            alert("Location saved!");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <input id="name" placeholder="Name">
+    <input id="course" placeholder="Course">
+    <button onclick="saveData()">Save</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Load saved data on page load
+        window.onload = function () {
+            let n = localStorage.getItem("name");
+            let c = localStorage.getItem("course");
+
+            if (n && c) {
+                document.getElementById("output").innerText =
+                    "Saved Data: " + n + " - " + c;
+
+                document.getElementById("name").value = n;
+                document.getElementById("course").value = c;
+            }
+        }
+
+        // Save to localStorage
+        function saveData() {
+            let name = document.getElementById("name").value;
+            let course = document.getElementById("course").value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("course", course);
+
+            document.getElementById("output").innerText =
+                "Saved Data: " + name + " - " + course;
+        }
+    </script>
+
+</body>
+
+</html>
