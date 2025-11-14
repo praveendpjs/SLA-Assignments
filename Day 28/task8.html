@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Debug This Code</h3>
+
+    <p><strong>Buggy Code:</strong></p>
+
+    <pre>
+let name = "Praveen"
+console.log(Name);
+</pre>
+
+    <input id="answer" placeholder="What's the bug?">
+    <button onclick="check()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function check() {
+            const ans = document.getElementById("answer").value.toLowerCase();
+
+            if (ans.includes("case") || ans.includes("uppercase") || ans.includes("variable name")) {
+                document.getElementById("result").innerHTML =
+                    "✔ Correct!<br>Bug: Variable name uses wrong uppercase letter.<br>Fix: Use <code>console.log(name)</code>";
+            } else {
+                document.getElementById("result").innerHTML =
+                    "❌ Nope. The bug is simple: variable name is spelled differently.";
+            }
+        }
+    </script>
+</body>
+
+</html>
