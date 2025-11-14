@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <style>
+        #gallery {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        #gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gallery">
+        <img class="photo" src="react.png" style="display: block;">
+        <img class="photo" src="mongodb.png" style="display: none;">
+        <img class="photo" src="Angular.png" style="display: none;">
+    </div>
+
+    <button id="prevBtn">Prev</button>
+    <button id="nextBtn">Next</button>
+    <script>
+        let current = 0;
+        const photos = $(".photo");
+
+        function showPhoto(index) {
+            photos.fadeOut(200);
+            photos.eq(index).fadeIn(200);
+        }
+
+        $("#nextBtn").click(function () {
+            current = (current + 1) % photos.length;
+            showPhoto(current);
+        });
+
+        $("#prevBtn").click(function () {
+            current = (current - 1 + photos.length) % photos.length;
+            showPhoto(current);
+        });
+
+    </script>
+
+</body>
+
+</html>
