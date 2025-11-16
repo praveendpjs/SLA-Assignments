@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="question">What is 2 + 2?</div>
+
+<button id="showAnswerBtn">Show Answer</button>
+<button id="hideAnswerBtn" style="display:none;">Hide Answer</button>
+
+<div id="answer" style="display:none;">The answer is 4.</div>
+<script>
+    $("#showAnswerBtn").click(function () {
+    $("#answer").show();
+    $("#showAnswerBtn").hide();
+    $("#hideAnswerBtn").show();
+});
+
+$("#hideAnswerBtn").click(function () {
+    $("#answer").hide();
+    $("#hideAnswerBtn").hide();
+    $("#showAnswerBtn").show();
+});
+
+</script>
+</body>
+
+</html>

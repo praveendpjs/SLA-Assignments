@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <style>
+        #notification {
+    background: #ffe08a;
+    padding: 15px;
+    border: 1px solid #d1a54c;
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+
+<body>
+    <button id="notifyBtn">Show Notification</button>
+
+    <div id="notification" style="display:none;">
+        This is a notification message!
+    </div>
+<script>
+    $("#notifyBtn").click(function () {
+    $("#notification").slideToggle(200);
+});
+
+</script>
+</body>
+
+</html>
