@@ -1,0 +1,1 @@
+select email as raw_email, trim(email) as trimmed_email from employees;
