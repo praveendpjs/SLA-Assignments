@@ -1,0 +1,4 @@
+SELECT 
+    EXTRACT(YEAR FROM DATE '2002-11-06') AS birth_year,
+    EXTRACT(MONTH FROM DATE '2002-11-06') AS birth_month,
+    EXTRACT(DAY FROM DATE '2002-11-06') AS birth_day;
