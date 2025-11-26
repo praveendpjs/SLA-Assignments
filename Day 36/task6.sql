@@ -1,0 +1,2 @@
+SELECT 
+    TIMESTAMPDIFF(MONTH, '2002-11-06', CURDATE()) AS total_months_old;
