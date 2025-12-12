@@ -14,15 +14,9 @@ function Task1_Counter() {
   return (
     <div style={{ padding: '20px', border: '1px solid #ccc', margin: '10px' }}>
       <h2>Task 1: Counter with Increase and Decrease</h2>
-      <div style={{ fontSize: '24px', margin: '20px 0' }}>
-        Count: {count}
-      </div>
-      <button onClick={increase} style={{ marginRight: '10px', padding: '10px 20px' }}>
-        Increase
-      </button>
-      <button onClick={decrease} style={{ padding: '10px 20px' }}>
-        Decrease
-      </button>
+      <p>Count: {count}</p>
+      <button onClick={increase}>Increase</button>
+      <button onClick={decrease} style={{ marginLeft: '10px' }}>Decrease</button>
     </div>
   )
 }

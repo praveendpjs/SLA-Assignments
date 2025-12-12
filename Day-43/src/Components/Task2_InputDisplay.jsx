@@ -10,16 +10,14 @@ function Task2_InputDisplay() {
   return (
     <div style={{ padding: '20px', border: '1px solid #ccc', margin: '10px' }}>
       <h2>Task 2: Input Box with Text Display</h2>
-      <input
-        type="text"
-        value={text}
+      <input 
+        type="text" 
+        value={text} 
         onChange={handleChange}
         placeholder="Type something..."
-        style={{ padding: '10px', width: '300px', fontSize: '16px' }}
+        style={{ padding: '8px', width: '300px' }}
       />
-      <div style={{ marginTop: '20px', fontSize: '18px' }}>
-        <strong>You typed:</strong> {text}
-      </div>
+      <p style={{ marginTop: '10px' }}>You typed: {text}</p>
     </div>
   )
 }
