@@ -22,3 +22,4 @@ function ProfileCard({ name, job, avatar }) {
 
 export default ProfileCard;
 
+

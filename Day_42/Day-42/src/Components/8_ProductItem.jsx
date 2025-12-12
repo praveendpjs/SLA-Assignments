@@ -16,3 +16,4 @@ function ProductItem({ title, price }) {
 
 export default ProductItem;
 
+
