@@ -378,3 +378,4 @@ useEffect(() => {
 5. ✅ Consider if you really need `useEffect` (some calculations can be done directly)
 6. ✅ Keep effects focused (one effect = one concern)
 
+
