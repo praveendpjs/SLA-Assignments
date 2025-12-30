@@ -38,3 +38,4 @@ function ResponsivePricingCard() {
 
 export default ResponsivePricingCard;
 
+

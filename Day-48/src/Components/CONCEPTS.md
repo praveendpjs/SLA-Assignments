@@ -271,3 +271,4 @@ Tailwind is mobile-first:
 4. Maintain consistent spacing
 5. Ensure proper contrast for accessibility
 
+
